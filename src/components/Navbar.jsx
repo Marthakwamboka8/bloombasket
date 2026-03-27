@@ -6,7 +6,7 @@ const Navbar = () => {
             <div class="col-md-12" >
                 {/* <!-- a nav with navbar content  --> */}
                 <nav class="navbar navbar-expand-md bg-success">
-                    <a href="" class="navbar-brand text-warning"> Bloom Basket <img src="images/flower.png" alt="" width={100} /></a>
+                    <a href="/" class="navbar-brand text-warning"> Bloom Basket <img src="images/flower.png" alt="" width={100} /></a>
                     <button class="navbar-toggler" data-bs-target="#navbarcollapse" data-bs-toggle="collapse">
                         <span class="navbar-toggler-icon"></span>
                     </button>
