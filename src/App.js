@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
@@ -8,7 +8,7 @@ import Signin from './components/Signin';
 import Addproduct from './components/Addproduct';
 import Getproducts from './components/Getproducts';
 import Mpesapayment from './components/Mpesapayment';
-import Test from './components/Test';
+
 
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import Navbar from './components/Navbar';
@@ -20,11 +20,11 @@ function App() {
         <Navbar />
         <header className="App-header">
 
-        <marquee behavior="" direction=""><h1 className='text-dark '>🪷Welcome to Bloom basket</h1></marquee>
+        <h1 className='text-dark '>🪷Welcome to Bloom basket</h1>
         </header>
 
         {/* nav link  */}
-        <nav className='bg-dark'>
+        <nav className='bg-light'>
           <Link to="/" className='btn btn-info m-1'>Getproduct </Link>
           <Link to="/Signup" className='btn btn-info m-1'> Signup </Link>
           <Link to="/Signin" className='btn btn-info m-1'>Signin </Link>

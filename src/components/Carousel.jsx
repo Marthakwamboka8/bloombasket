@@ -10,19 +10,19 @@ const Carousel = () => {
                     <div class="carousel-inner">
                         {/* <!-- div with image 1  --> */}
                         <div class="carousel-item">
-                            <img src="images/p1.avif" alt="slide1" width={1000} height={450}/>
+                            <img src="images/p3.avif" alt="slide1" />
                         </div>
                         {/* <!-- div with image 2  --> */}
                         <div class="carousel-item active">
-                            <img src="images/p2.avif" alt=" slide 2" width={1000} height={450}/>
+                            <img src="images/p7.avif" alt=" slide 2"  />
                         </div>
                         {/* <!-- div with image 3  --> */}
                         <div class="carousel-item">
-                            <img src="images/p5.avif" alt="slide 3" width={1000} height={450}/>
+                            <img src="images/1.webp" alt="slide 3" />
                         </div>
                         {/* <!-- div with image 4  --> */}
                         <div class="carousel-item">
-                            <img src="images/p6.avif" alt="slide 4" width={1000} height={450}/>
+                            <img src="images/p6.avif" alt="slide 4" />
                         </div>
 
                     </div>

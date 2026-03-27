@@ -1,15 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap');
-
-
+@import url('https://fonts.googleapis.com/css2?family=Baskervville:ital,wght@0,400..700;1,400..700&family=Dancing+Script:wght@400..700&family=Great+Vibes&family=Lugrasimo&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Rouge+Script&family=Spirax&display=swap');
 body {
   margin: 0;
-    font-family: "Tangerine", cursive !important;
-
+  font-family: "Libre Baskerville", serif !important; 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-   font-family: "Tangerine", cursive;
-
+  font-family: "Libre Baskerville", serif;
+    
 }

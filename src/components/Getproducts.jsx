@@ -2,6 +2,7 @@ import axios from 'axios'
 import React,{useState,useEffect}from 'react'
 import {useNavigate}from"react-router-dom"
 import Carousel from './Carousel';
+import Footer from './Footer';
 const Getproducts = () => {
     let navigate=useNavigate();
     // declare our states here
@@ -12,12 +13,14 @@ const Getproducts = () => {
     const getproducts=async()=>{
         setLoading("Please Wait ....")
         try{
-            const response=await axios.get("http://marthahiggs.alwaysdata.net/api/getproducts")
+            const response=await axios.get("https://marthahiggs.alwaysdata.net/api/getproducts")
             setProducts(response.data)
             setLoading("")
 
         }
         catch(error){
+        setError(error.message)
+        setLoading("")
 
         }
     }
@@ -27,10 +30,10 @@ const Getproducts = () => {
             getproducts()
         },[])
         console.log(products)
-        const imagepath="http://marthahiggs.alwaysdata.net/static/images/"    
+        const imagepath="https://marthahiggs.alwaysdata.net/static/images/"    
     return (
        
-       <div className="row bg-dark">
+       <div className="row bg-light">
         <h1 className='text-success'>Available products</h1>
         {/* carousel goes here  */}
         <Carousel/>
@@ -38,7 +41,7 @@ const Getproducts = () => {
         <h2 className='text-warning'>{loading}</h2>
         <h2 className='text-danger'>{error}</h2>
         {/* map here  */}
-        {products.map(singleproduct=>(
+        {products?.map(singleproduct=>(
             <div className="col-md-3 mb-4">
                 <div className='card shadow  h-100'>
 
@@ -54,6 +57,7 @@ const Getproducts = () => {
         </div>
         
     ))}
+    <Footer/>
        </div>
        
     )

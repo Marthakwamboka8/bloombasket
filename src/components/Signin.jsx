@@ -22,7 +22,7 @@ const Signin = () => {
         formdata.append("email",email)
         formdata.append("password",password)
         try {
-            const response=await axios.post("http://higgs.alwaysdata.net/api/signin",formdata)
+            const response=await axios.post("https://higgs.alwaysdata.net/api/signin",formdata)
             setSuccess(response.data.message)
             setLoading("")
             // if login / signin is successful we save user to local storage 
@@ -39,6 +39,8 @@ const Signin = () => {
             }
         } 
         catch (error) {
+        setError(error.message)
+        setLoading("")
             
         }
 

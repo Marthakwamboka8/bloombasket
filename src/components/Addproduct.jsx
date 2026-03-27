@@ -23,11 +23,13 @@ const Addproduct = () => {
         formdata.append("product_cost",product_cost)  
         formdata.append("product_photo",product_photo)
         try{
-            const response=await axios.post("http://marthahiggs.alwaysdata.net/api/addproduct",formdata)
+            const response=await axios.post("https://marthahiggs.alwaysdata.net/api/addproduct",formdata)
             setSuccess(response.data.message) 
             setLoading("")
         }
         catch(error){
+        setError(error.message)
+        setLoading("")
 
         }
     }
