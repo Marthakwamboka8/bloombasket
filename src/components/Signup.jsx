@@ -8,38 +8,53 @@ const Signup = () => {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const [phone, setPhone] = useState("")
+    const [strength, setStrength] = useState("")
 
-    const[loading,setLoading]=useState("")
-    const[success,setSuccess]=useState("")
-    const[error,setError]=useState("")
+    const [loading, setLoading] = useState("")
+    const [success, setSuccess] = useState("")
+    const [error, setError] = useState("")
     // function to handle submit 
-    const handlesubmit= async (e)=>{
+    const handlesubmit = async (e) => {
         e.preventDefault()
         setLoading("please wait...")
 
         // create empty digital envelope to store user inputs 
-        const formdata= new FormData()
+        const formdata = new FormData()
         // append/add 
-        formdata.append("username",username)
-        formdata.append("email",email)
-        formdata.append("password",password)
-        formdata.append("phone",phone)
-        try{
-            const response= await axios.post("https://higgs.alwaysdata.net/api/signup",formdata)
+        formdata.append("username", username)
+        formdata.append("email", email)
+        formdata.append("password", password)
+        formdata.append("phone", phone)
+        try {
+            const response = await axios.post("https://higgs.alwaysdata.net/api/signup", formdata)
             setSuccess(response.data.message)
             setLoading("")
         }
-        catch(error){
-        setError(error.message)
-        setLoading("")
+        catch (error) {
+            setError(error.message)
+            setLoading("")
 
         }
 
     }
+    const checkPasswordStrength = (password) => {
+        if (password.length < 4) {
+            setStrength("weak");
+        }
+        else if (
+            password.length < 8
+        ) {
+            setStrength("medium");
+
+        }
+        else {
+            setStrength("strong");
+        }
+    };
 
 
     return (
-        <div className="row  mt-1 justify-content-center">
+        <div className="row  mt-1 justify-content-center body">
             <div className='col-md-6 card shadow'>
                 <h1>Signup</h1>
                 {/* bind the states  */}
@@ -50,8 +65,35 @@ const Signup = () => {
                     {/* <input type="password" className="form-control" placeholder="Enter password" onChange={(e) => setPassword(e.target.value)} /><br /> */}
                     <input type="text" className="form-control" placeholder=" 👤Enter username" onChange={(e) => setUsername(e.target.value)} /><br />
                     <input type="email" className="form-control" placeholder="✉️ Enter email" onChange={(e) => setEmail(e.target.value)} /><br />
-                    <input type="password" className="form-control" placeholder="🔒Enter password" onChange={(e) => setPassword(e.target.value)} /><br />
-                    <input type="tel" className="form-control" placeholder="📞Enter phone" onChange={(e) => setPhone(e.target.value)} /><br />
+                    <input type="password" className="form-control" placeholder="🔒Enter password" onChange={(e) => {
+                        setPassword(e.target.value);
+                        checkPasswordStrength(e.target.value);
+                    }} /><br />
+                    {
+                        password && (
+                            <p
+                                style={{
+                                    color:
+                                        strength === "weak"
+                                            ? "red"
+                                            : strength === "medium"
+                                                ? "orange"
+                                                : "green"
+                                }
+
+                                }
+                            >
+                                Password Strength:{strength}
+
+                            </p>
+                        )
+                    }
+
+
+
+                    <input type="tel" className="form-control" placeholder="📞Enter phone" onChange={(e) => setPhone(e.target.value)
+
+                    } /><br />
                     <input type="submit" value="signup" className="btn btn-primary col-md-12 " />
                     <p>Already you have an account? <Link to="/signin">Signin</Link></p>
                 </form>

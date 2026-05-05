@@ -1,12 +1,101 @@
 @import url('https://fonts.googleapis.com/css2?family=Baskervville:ital,wght@0,400..700;1,400..700&family=Dancing+Script:wght@400..700&family=Great+Vibes&family=Lugrasimo&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Rouge+Script&family=Spirax&display=swap');
+
 body {
   margin: 0;
-  font-family: "Libre Baskerville", serif !important; 
+  font-family: "Libre Baskerville", serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: #bef8fa;
+
 }
 
 code {
   font-family: "Libre Baskerville", serif;
-    
+
 }
+
+.carousel {
+  position: relative;
+  padding: 20px;
+  ;
+  color: white;
+}
+
+.row {
+  display: flex;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+}
+
+.row::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  width: 200px;
+  margin-right: 10px;
+  transition: transform 0.3s;
+  border-radius: 6px;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  background-color: #c5f3f5;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1;
+}
+
+.left {
+  left: 0;
+}
+
+.right {
+  right: 0;
+}
+
+.carousel {
+  background: linear-gradient(135deg, #dcfff9, #bef8fa);
+}
+
+
+.body {
+  margin: 0;
+  background: linear-gradient(to right, #f6feff, #f1f8f8);
+}
+
+.logout-btn {
+  background-color: transparent;
+  color: #555;
+  border: 1px solid #b39797;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.logout-btn:hover {
+  background-color: #f1c3e5;
+  color: #000;
+}
+.header {
+  background-color: rgba(6, 211, 238, 0.849);
+  min-height: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+

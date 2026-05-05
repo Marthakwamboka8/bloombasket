@@ -20,7 +20,7 @@ function App() {
         <Navbar />
         <header className="App-header">
 
-        <h1 className='text-dark '>🪷Welcome to Bloom basket</h1>
+       <h3 className='text-dark '>🪷Welcome to Bloom basket</h3>
         </header>
 
         {/* nav link  */}
@@ -40,9 +40,7 @@ function App() {
           <Route path='/makepayment' element={<Mpesapayment />} />
         </Routes>
       </div>
-      <footer class="bg-black pd-5 text-center">
-        <b class="text-white">Developed by Martha &copy;2026. All rights reserved</b>
-    </footer>
+  
     </BrowserRouter>
   );
 }
