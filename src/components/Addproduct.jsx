@@ -34,7 +34,7 @@ const Addproduct = () => {
         }
     }
     return (
-        <div className="row justify-content-center mt-2 ">
+        <div className="row justify-content-center mt-2 body">
             <div className="col-md-8 card shadow p-4">
                 <h1 className="text-success">Add product</h1>
                 {/* binding the states  */}

@@ -8,6 +8,7 @@ import Signin from './components/Signin';
 import Addproduct from './components/Addproduct';
 import Getproducts from './components/Getproducts';
 import Mpesapayment from './components/Mpesapayment';
+import Home from './components/Home';
 
 
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
@@ -18,31 +19,29 @@ function App() {
       <div className="App">
         {/* navbar goes here  */}
         <Navbar />
-        <header className="App-header">
-
-        <h1 className='text-dark '>🪷Welcome to Bloom basket</h1>
-        </header>
+       
 
         {/* nav link  */}
-        <nav className='bg-light'>
-          <Link to="/" className='btn btn-info m-1'>Getproduct </Link>
+        {/* <nav className='bg-light'>
+          <Link to="/products" className='btn btn-info m-1'>Getproduct </Link>
           <Link to="/Signup" className='btn btn-info m-1'> Signup </Link>
           <Link to="/Signin" className='btn btn-info m-1'>Signin </Link>
           <Link to="/Addproduct" className='btn btn-info m-1'>Addproduct </Link>
+          <Link to="/" className='btn btn-info m-1'>Home</Link> */}
 
-        </nav>
+{/* 
+        </nav> */}
         {/* Routes  */}
         <Routes>
-          <Route path='/' element={<Getproducts />} />
+          <Route path='/products' element={<Getproducts />} />
           <Route path='/Signup' element={<Signup />} />
           <Route path='/Signin' element={<Signin />} />
           <Route path='/Addproduct' element={<Addproduct />} />
           <Route path='/makepayment' element={<Mpesapayment />} />
+          <Route path='/' element={<Home />} />
         </Routes>
       </div>
-      <footer class="bg-black pd-5 text-center">
-        <b class="text-white">Developed by Martha &copy;2026. All rights reserved</b>
-    </footer>
+
     </BrowserRouter>
   );
 }

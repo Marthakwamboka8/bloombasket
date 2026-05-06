@@ -3,13 +3,11 @@ import React from 'react'
 const Footer = () => {
   return (
    <div>
-     <section class="row bg-warning p-3">
+     <section class="row bg-dark p-3">
             {/* <!-- child 1 --> */}
             <div class="col-md-4">
                 <h2 class="text-center text-white">About us</h2>
-                <p class="text-white text-center">Tumaini collections gives hope to all who are out of options. Even
-                    from our name which gives a vivid description of what we have to offer. We are located at Nairobi
-                    Kenya</p>
+                <p class="text-white text-center">Brighten someone’s day with fresh, handpicked blooms! 🌸 Our flower shop creates beautiful, custom arrangements perfect for birthdays, weddings, and every special moment. Enjoy same-day delivery, stunning designs, and flowers that speak from the heart—because every occasion deserves something beautiful.</p>
             </div>
             {/* <!-- child 2  --> */}
             <div class="col-md-4">
