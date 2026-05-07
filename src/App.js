@@ -9,9 +9,10 @@ import Addproduct from './components/Addproduct';
 import Getproducts from './components/Getproducts';
 import Mpesapayment from './components/Mpesapayment';
 import Home from './components/Home';
+import Chatbot from './components/Chatbot';
 
 
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 function App() {
   return (
@@ -22,12 +23,12 @@ function App() {
        
 
         {/* nav link  */}
-        {/* <nav className='bg-light'>
+        {/* <nav className='bg-light'>/npm *}
           <Link to="/products" className='btn btn-info m-1'>Getproduct </Link>
           <Link to="/Signup" className='btn btn-info m-1'> Signup </Link>
           <Link to="/Signin" className='btn btn-info m-1'>Signin </Link>
           <Link to="/Addproduct" className='btn btn-info m-1'>Addproduct </Link>
-          <Link to="/" className='btn btn-info m-1'>Home</Link> */}
+          <Link to="/" className='btn btn-info m-1'>Home</Link> 
 
 {/* 
         </nav> */}
@@ -39,8 +40,10 @@ function App() {
           <Route path='/Addproduct' element={<Addproduct />} />
           <Route path='/makepayment' element={<Mpesapayment />} />
           <Route path='/' element={<Home />} />
+          <Route path='/chatbot' element={<Chatbot/>}/>
         </Routes>
       </div>
+      <Chatbot/>
 
     </BrowserRouter>
   );

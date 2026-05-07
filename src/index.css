@@ -71,7 +71,7 @@ code {
 
 .body {
   margin: 0;
-  background: linear-gradient(to right, #f7bcff, #f9b4ff);
+  background: linear-gradient(to right,#e593b3, #e593b3);
 }
 
 .logout-btn {
@@ -127,4 +127,26 @@ code {
   background-color: #e593b3;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 
+}
+.flower-chat-btn {
+  background: linear-gradient(135deg, #ff7eb3, #ff4f81);
+  color: white;
+  border: none;
+  padding: 14px 24px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(255, 79, 129, 0.3);
+  transition: all 0.3s ease;
+}
+
+.flower-chat-btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 10px 20px rgba(255, 79, 129, 0.4);
+  background: linear-gradient(135deg, #ff4f81, #ff7eb3);
+}
+
+.flower-chat-btn:active {
+  transform: scale(0.98);
 }

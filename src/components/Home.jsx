@@ -73,7 +73,7 @@ const Home = () => {
                     <div className="col-md-4 mb-4">
                         <div className="card shadow h-100">
                             <img
-                                src="https://images.unsplash.com/photo-1520763185298-1b434c91910"
+                                src="https://images.unsplash.com/photo-1525310072745-f49212b5ac6d"
                                 className="card-img-top"
                                 alt="Roses"
                             />
@@ -89,9 +89,7 @@ const Home = () => {
                     <div className="col-md-4 mb-4">
                         <div className="card shadow h-100">
                             <img
-                                src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6"
-                                className="card-img-top"
-                                alt="Tulips"
+                                src="https://images.unsplash.com/photo-1468327768560-75b778cbb551" alt="Tulips"
                             />
                             <div className="card-body text-center">
                                 <h5 className="card-title">Tulips</h5>
@@ -105,9 +103,7 @@ const Home = () => {
                     <div className="col-md-4 mb-4">
                         <div className="card shadow h-100">
                             <img
-                                src="https://images.unsplash.com/photo-1509042239860-f550ce710b93"
-                                className="card-img-top"
-                                alt="Lilies"
+                                src="https://images.unsplash.com/photo-1518895949257-7621c3c786d7" alt="Lilies"
                             />
                             <div className="card-body text-center">
                                 <h5 className="card-title">Lilies</h5>
